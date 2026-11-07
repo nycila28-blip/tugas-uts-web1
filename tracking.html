@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking | Toko Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="tracking">
+    <header class="site-header">
+        <span class="brand">Toko Buku</span>
+        <nav aria-label="Navigasi utama">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Stok</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html" class="aktif">Tracking</a>
+            <a href="index.html" id="btnKeluar">Keluar</a>
+        </nav>
+    </header>
+
+    <main class="konten">
+        <section class="panel" aria-labelledby="judulCari">
+            <h2 id="judulCari">Lacak Pengiriman</h2>
+            <form id="formCari" novalidate>
+                <label for="nomorDO">Nomor Delivery Order</label>
+                <div class="baris-cari">
+                    <input type="text" id="nomorDO" inputmode="numeric" placeholder="contoh: 20230012">
+                    <button type="submit">Cari</button>
+                </div>
+                <p class="pesan-error" id="errCari"></p>
+            </form>
+        </section>
+
+        <section class="panel" id="hasilTracking" aria-labelledby="namaTracking" hidden>
+            <h2 id="namaTracking">-</h2>
+            <p class="no-do" id="nomorTracking"></p>
+            <p>Status: <strong id="teksStatus"></strong></p>
+
+            <div class="progress" id="progressWrap" role="progressbar" aria-label="Progres pengiriman" aria-valuemin="0"
+                aria-valuemax="100">
+                <span id="barProgress"></span>
+            </div>
+            <ol class="langkah" id="daftarLangkah"></ol>
+
+            <h3>Detail Pengiriman</h3>
+            <dl class="detail-grid">
+                <dt>Ekspedisi</dt>
+                <dd id="dEkspedisi"></dd>
+                <dt>Tanggal kirim</dt>
+                <dd id="dTanggal"></dd>
+                <dt>Jenis paket</dt>
+                <dd id="dPaket"></dd>
+                <dt>Total pembayaran</dt>
+                <dd id="dTotal"></dd>
+            </dl>
+
+            <h3>Riwayat Perjalanan</h3>
+            <ul class="perjalanan" id="daftarPerjalanan"></ul>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | Toko Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="checkout">
+    <header class="site-header">
+        <span class="brand">Toko Buku</span>
+        <nav aria-label="Navigasi utama">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Stok</a>
+            <a href="checkout.html" class="aktif">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="index.html" id="btnKeluar">Keluar</a>
+        </nav>
+    </header>
+
+    <main class="konten">
+        <section class="panel" aria-labelledby="judulKeranjang">
+            <h2 id="judulKeranjang">Data Pemesanan</h2>
+
+            <div class="baris-pilih">
+                <div>
+                    <label for="pilihBuku">Pilih buku</label>
+                    <select id="pilihBuku"></select>
+                </div>
+                <div>
+                    <label for="jumlahBuku">Jumlah</label>
+                    <input type="number" id="jumlahBuku" value="1" min="1">
+                </div>
+                <button type="button" id="btnTambahItem">Tambah ke pesanan</button>
+            </div>
+            <p class="pesan-error" id="errKeranjang"></p>
+
+            <div class="tabel-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Buku</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="isiKeranjang"></tbody>
+                </table>
+            </div>
+            <p class="total-bayar">Total: <span id="totalBayar">Rp 0</span></p>
+        </section>
+
+        <section class="panel" aria-labelledby="judulPemesan">
+            <h2 id="judulPemesan">Data Pemesan dan Pembayaran</h2>
+            <form id="formCheckout" novalidate>
+                <div class="baris-form">
+                    <div>
+                        <label for="namaPemesan">Nama pemesan</label>
+                        <input type="text" id="namaPemesan">
+                    </div>
+                    <div>
+                        <label for="telpPemesan">No. telepon</label>
+                        <input type="text" id="telpPemesan" inputmode="numeric" placeholder="contoh: 081234567890">
+                    </div>
+                </div>
+
+                <label for="alamatPemesan">Alamat pengiriman</label>
+                <textarea id="alamatPemesan" rows="3"></textarea>
+
+                <div class="baris-form">
+                    <div>
+                        <label for="ekspedisi">Ekspedisi</label>
+                        <select id="ekspedisi">
+                            <option>JNE</option>
+                            <option>Pos Indonesia</option>
+                            <option>J&amp;T Express</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="jenisPaket">Jenis paket</label>
+                        <select id="jenisPaket">
+                            <option>Reguler</option>
+                            <option>Express</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="metodeBayar">Metode pembayaran</label>
+                        <select id="metodeBayar">
+                            <option value="">-- Pilih metode --</option>
+                            <option>Transfer Bank</option>
+                            <option>E-Wallet</option>
+                            <option>COD (Bayar di tempat)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="pesan-error" id="errCheckout"></p>
+                <button type="submit">Buat pesanan</button>
+            </form>
+        </section>
+
+        <section class="panel" id="history" aria-labelledby="judulHistory">
+            <h2 id="judulHistory">History Transaksi</h2>
+            <div class="tabel-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No. DO</th>
+                            <th>Tanggal</th>
+                            <th>Pemesan</th>
+                            <th>Ekspedisi</th>
+                            <th>Pembayaran</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="isiHistory"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Buku | Toko Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="stok">
+    <header class="site-header">
+        <span class="brand">Toko Buku</span>
+        <nav aria-label="Navigasi utama">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html" class="aktif">Stok</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="index.html" id="btnKeluar">Keluar</a>
+        </nav>
+    </header>
+
+    <main class="konten">
+        <section class="panel" aria-labelledby="judulKatalog">
+            <h2 id="judulKatalog">Informasi Stok / Katalog Buku</h2>
+            <div class="tabel-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Kode</th>
+                            <th>Nama Barang</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="isiTabelStok"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="judulTambah">
+            <h2 id="judulTambah">Tambah Stok Baru</h2>
+            <form id="formStok" novalidate>
+                <div class="baris-form">
+                    <div>
+                        <label for="kodeBaru">Kode barang</label>
+                        <input type="text" id="kodeBaru" placeholder="contoh: ASIP4302">
+                    </div>
+                    <div>
+                        <label for="namaBaru">Nama barang</label>
+                        <input type="text" id="namaBaru">
+                    </div>
+                    <div>
+                        <label for="jenisBaru">Jenis barang</label>
+                        <select id="jenisBaru">
+                            <option value="">-- Pilih jenis --</option>
+                            <option>Buku Ajar</option>
+                            <option>Modul</option>
+                            <option>Buku Referensi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="edisiBaru">Edisi</label>
+                        <input type="number" id="edisiBaru" min="1">
+                    </div>
+                    <div>
+                        <label for="hargaBaru">Harga (Rp)</label>
+                        <input type="number" id="hargaBaru" min="0">
+                    </div>
+                    <div>
+                        <label for="stokBaru">Stok</label>
+                        <input type="number" id="stokBaru" min="0">
+                    </div>
+                </div>
+                <p class="pesan-error" id="errStok"></p>
+                <button type="submit">Tambah ke tabel</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

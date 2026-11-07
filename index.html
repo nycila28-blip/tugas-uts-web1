@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Toko Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #14213d 0 45%, #f3f6f8 45% 100%);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+    </style>
+</head>    
+<body data-page="login">
+    <main class="login-container">
+        <header>
+            <h1>Toko Buku</h1>
+            <p style="color: #5b6b7b;">Silahkan Login Untuk Melanjutkan</p>
+        </header>
+
+        <form id="formLogin" novalidate>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh: rina@gmail.com">
+            <p class="pesan-error" id="errEmail"></p>
+
+            <label for="password">Password</label>
+            <input type="pasword" id="password" name="password">
+            <p class="pesan-error" id="errPassword"></p>
+
+            <button type="submit" id="btnLogin">Login</button>
+        </form>
+
+        <div class="aksi-tambahan">
+            <button type="button" id="btnLupa">Lupa Password</button>
+            <button type="button" id="btnDaftar">Daftar</button>
+        </div>
+    </main>
+    
+    <!-- Modal Lupa Password-->
+     <div class="modal" id="modalLupa" role="dialog" aria-modal="true" aria-labelledby="judulLupa">
+        <div class="modal-isi">
+            <h2 id="judulLupa">Lupa Password</h2>
+            <p>Masukkan email kamu, nanti kami kirim petunjuk reset password.</p>
+            <form id="formLupa" novalidate>
+                <label for="emailLupa">Email</label>
+                <input type="email" id="emailLupa">
+                <p class="pesan-error" id="errLupa"></p>
+                <button type="submit">Kirim</button>
+                <button type="button" class="tutup">Batal</button>
+            </form>
+        </div>
+     </div>
+
+     <!--Modal Daftar-->
+     <div class="modal" id="modalDaftar" role="dialog" aria-modal="true" aria-labelledby="judulDaftar">
+        <div class="modal-isi">
+            <h2 id="judulDaftar">Daftar Akun</h2>
+            <form id="formDaftar" novalidate>
+                <label for="namaDaftar">Nama Lengkap</label>
+                <input type="text" id="namaDaftar">
+                <label for="emailDaftar">Email</label>
+                <input type="email" id="emailDaftar">
+                <label for="passDaftar">Password</label>
+                <input type="password" id="passDaftar">
+                <p class="pesan-error" id="errDaftar"></p>
+                <button type="submit">Buat Akun</button>
+                <button type="button" class="tutup">Batal</button>
+            </form>
+        </div>
+     </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
