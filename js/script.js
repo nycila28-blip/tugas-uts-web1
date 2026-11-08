@@ -659,16 +659,6 @@ if (tombolKeluar) {
 
 if (halaman === "login") initLogin();
 if (halaman === "dashboard") initDashboard();
-if (halaman === "login") initLogin();
-if (halaman === "dashboard") initDashboard();
-if (halaman === "stok") initStok();
-if (halaman === "login") initLogin();
-if (halaman === "dashboard") initDashboard();
-if (halaman === "stok") initStok();
-if (halaman === "checkout") initCheckout();
-if (halaman === "login") initLogin();
-if (halaman === "dashboard") initDashboard();
 if (halaman === "stok") initStok();
 if (halaman === "checkout") initCheckout();
 if (halaman === "tracking") initTracking();
-
