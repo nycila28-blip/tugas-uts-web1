@@ -10,8 +10,8 @@
 
 ## Tautan
 
-- **Repository GitHub:** ISI_LINK_REPOSITORY
-- **Video penjelasan (YouTube):** ISI_LINK_YOUTUBE
+- **Repository GitHub:** https://github.com/nycila28-blip/tugas-uts-web1.git
+- **Video penjelasan (YouTube):** [(https://youtu.be/ERqUoS_4LZI?si=wYwqdmlB8mbHg7Xj)]
 
 ## Deskripsi Project 
 
